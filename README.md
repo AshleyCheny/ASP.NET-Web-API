@@ -42,6 +42,7 @@ Follow a tutorial creating a ProductsApp
     }
 
     //Getting a Product By ID
+    //When input an ID, click the submit button, will run the find() method in <script>
     function find() {
       var id = $('#prodId').val(); //save the input text
       $.getJSON(uri + '/' + id) //Send an HTTP GET request to "/api/products/id"
