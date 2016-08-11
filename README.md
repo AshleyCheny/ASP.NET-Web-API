@@ -1,5 +1,5 @@
 # ASP.NET-Web-API
-Follow a tutorial creating a ProductsApp
+Follow a tutorial creating a ProductsApp using the following technologies
 
 # [Creating a Web API Tutorial](http://www.asp.net/web-api/overview/getting-started-with-aspnet-web-api/tutorial-your-first-web-api)
 * ASP.NET Web Application
