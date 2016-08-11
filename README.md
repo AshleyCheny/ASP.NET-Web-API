@@ -12,13 +12,19 @@ Follow a tutorial creating a ProductsApp
 * Add an `HTML` page that uses `AJAX` to call the web API. 
 * We'll use `jQuery` to make the `AJAX` calls and also to update the page with the results.
 ```go
+<div>
+    <h2>Search by ID</h2>
+    <input type="text" id="prodId" size="5" />
+    <input type="button" value="Search" onclick="find();" />
+    <p id="product" />
+  </div>
 <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
   <script>
     var uri = 'api/products';
-
+    //getting a list of products
     $(document).ready(function () {
       // Send an AJAX request
-      $.getJSON(uri)
+      $.getJSON(uri) //getJSON() is a JQuery function that sends AJAX request.
           .done(function (data) {
             // On success, 'data' contains a list of products.
             $.each(data, function (key, item) {
@@ -32,9 +38,10 @@ Follow a tutorial creating a ProductsApp
       return item.Name + ': $' + item.Price;
     }
 
+    //Getting a Product By ID
     function find() {
       var id = $('#prodId').val();
-      $.getJSON(uri + '/' + id)
+      $.getJSON(uri + '/' + id) //Send an HTTP GET request to "/api/products/id"
           .done(function (data) {
             $('#product').text(formatItem(data));
           })
@@ -43,6 +50,4 @@ Follow a tutorial creating a ProductsApp
           });
     }
   </script>
-
- 
 ```
