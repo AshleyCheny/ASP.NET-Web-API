@@ -3,7 +3,9 @@ Follow a tutorial creating a ProductsApp
 
 # [Creating a Web API Tutorial](http://www.asp.net/web-api/overview/getting-started-with-aspnet-web-api/tutorial-your-first-web-api)
 * ASP.NET Web Application
-* 
+* API
+* HTML
+* JavaScript/JQuery/AJAX
 
 ## 1) Create Web API
 
@@ -21,7 +23,8 @@ Follow a tutorial creating a ProductsApp
 <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
   <script>
     var uri = 'api/products';
-    //getting a list of products
+    
+    //getting a list of products, after load the html then the web page will run the script, that's why it will take a while to display the list of products.
     $(document).ready(function () {
       // Send an AJAX request
       $.getJSON(uri) //getJSON() is a JQuery function that sends AJAX request.
