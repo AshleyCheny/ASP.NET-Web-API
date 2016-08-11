@@ -29,7 +29,7 @@ Follow a tutorial creating a ProductsApp
             // On success, 'data' contains a list of products.
             $.each(data, function (key, item) {
               // Add a list item for the product.
-              $('<li>', { text: formatItem(item) }).appendTo($('#products'));
+              $('<li>', { text: formatItem(item) }).appendTo($('#products')); //#products is the id of element <ul>
             });
           });
     });
@@ -40,13 +40,13 @@ Follow a tutorial creating a ProductsApp
 
     //Getting a Product By ID
     function find() {
-      var id = $('#prodId').val();
+      var id = $('#prodId').val(); //save the input text
       $.getJSON(uri + '/' + id) //Send an HTTP GET request to "/api/products/id"
           .done(function (data) {
-            $('#product').text(formatItem(data));
+            $('#product').text(formatItem(data)); //if success, display the content in element <p>(#product is the id of element p)
           })
           .fail(function (jqXHR, textStatus, err) {
-            $('#product').text('Error: ' + err);
+            $('#product').text('Error: ' + err); //id fail, dispaly the error message
           });
     }
   </script>
