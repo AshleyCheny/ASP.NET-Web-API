@@ -91,3 +91,7 @@ public class ProductsController : ApiController
     }
   </script>
 ```
+
+# Reference Links
+* [Web API](http://web.csulb.edu/~pnguyen/cecs475/pdf/webapi.pdf)
+* [WCF or ASP.NET Web API](http://web.csulb.edu/~pnguyen/cecs475/pdf/WCF%20or%20ASP.pdf)
